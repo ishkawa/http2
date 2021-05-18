@@ -49,7 +49,7 @@ class Header {
   Header(this.name, this.value, {this.neverIndexed = false});
 
   factory Header.ascii(String name, String value) {
-    return Header(ascii.encode(name), ascii.encode(value));
+    return Header(ascii.encode(name.toLowerCase()), ascii.encode(value));
   }
 }
 
